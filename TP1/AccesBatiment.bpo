@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="Position" org.eventb.core.type="ℙ(Position)"/>
+<org.eventb.core.poIdentifier name="Dedans" org.eventb.core.type="Position"/>
+<org.eventb.core.poIdentifier name="Dehors" org.eventb.core.type="Position"/>
+<org.eventb.core.poPredicate name="Positioo" org.eventb.core.predicate="partition(Position,{Dedans},{Dehors})" org.eventb.core.source="/TP1/Positions.buc|org.eventb.core.contextFile#Positions|org.eventb.core.axiom#_P0hxcL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="fPos" org.eventb.core.type="ℙ(Personne×Position)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/f/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTALLHYPPositionu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Personne × {Dehors}∈Personne → Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poSequent#INITIALISATION\/f\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTPositionu" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="fPos'" org.eventb.core.type="ℙ(Personne×Position)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPPositionu" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTIDENTPositionu" org.eventb.core.poStamp="12"/>
+<org.eventb.core.poSequent name="ENTRER/j/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTHYPPositionv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fPos)∧fPos∈Personne ⇸ Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.guard#_L3KAIL1wEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.guard#_L3KAIL1wEei2xYMIwkibTg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTHYPPositionv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ENTRER/f/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTALLHYPPositionv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="fPos{p ↦ Dedans}∈Personne → Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poSequent#ENTRER\/f\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTPositionv" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="fPos'" org.eventb.core.type="ℙ(Personne×Position)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPPositionv'" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTIDENTPositionv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.guard#_L3JZEb1wEei2xYMIwkibTg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPPositionv" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTHYPPositionv'" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fPos(p)=Dehors" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.guard#_L3KAIL1wEei2xYMIwkibTg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SORTIR/j/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTHYPPositionw'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fPos)∧fPos∈Personne ⇸ Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.guard#_BaQ4kb1yEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.guard#_BaQ4kb1yEei2xYMIwkibTg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTHYPPositionw'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SORTIR/f/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTALLHYPPositionw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="fPos{p ↦ Dehors}∈Personne → Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poSequent#SORTIR\/f\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTPositionw" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="fPos'" org.eventb.core.type="ℙ(Personne×Position)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPPositionw'" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTIDENTPositionw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.guard#_-lENEL1xEei2xYMIwkibTg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPPositionw" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#EVTHYPPositionw'" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fPos(p)=Dedans" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.guard#_BaQ4kb1yEei2xYMIwkibTg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/AccesBatiment.bpo|org.eventb.core.poFile#AccesBatiment|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fPos∈Personne → Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

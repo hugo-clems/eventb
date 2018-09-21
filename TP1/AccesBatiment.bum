@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1537516092115" org.eventb.texttools.text_representation="machine AccesBatiment sees Positions Personnes&#10;variables&#10;&#9;fPos&#10;invariants&#10;&#9;@f fPos ∈ Personne → Position&#10;events&#10;  event INITIALISATION&#10;  &#9;then @i fPos ≔ Personne × { Dehors }&#10;  end&#10;  event ENTRER&#10;  &#9;any p&#10;  &#9;where @g p ∈ Personne&#10;  &#9;&#9;  @j fPos(p) = Dehors&#10;  &#9;then @f fPos(p) ≔ Dedans&#10;  end&#10;  event SORTIR&#10;  &#9;any p&#10;  &#9;where @g p ∈ Personne&#10;  &#9;&#9;  @j fPos(p) = Dedans&#10;  &#9;then @f fPos(p) ≔ Dehors&#10;  end&#10;end" version="5">
+<org.eventb.core.seesContext name="_G0dpsL1tEei2xYMIwkibTg" org.eventb.core.target="Positions"/>
+<org.eventb.core.seesContext name="_Z7uq8L1sEei2xYMIwkibTg" org.eventb.core.target="Personnes"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_miaXQL1vEei2xYMIwkibTg" org.eventb.core.assignment="fPos ≔ Personne × { Dehors }" org.eventb.core.label="i"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_Z7vSAL1sEei2xYMIwkibTg" org.eventb.core.identifier="fPos"/>
+<org.eventb.core.invariant name="_Z7v5EL1sEei2xYMIwkibTg" org.eventb.core.label="f" org.eventb.core.predicate="fPos ∈ Personne → Position"/>
+<org.eventb.core.event name="_L3JZEL1wEei2xYMIwkibTg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ENTRER">
+<org.eventb.core.parameter name="_-lDmAL1xEei2xYMIwkibTg" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_L3JZEb1wEei2xYMIwkibTg" org.eventb.core.label="g" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_L3KAIL1wEei2xYMIwkibTg" org.eventb.core.label="j" org.eventb.core.predicate="fPos(p) = Dehors"/>
+<org.eventb.core.action name="_L3JZEr1wEei2xYMIwkibTg" org.eventb.core.assignment="fPos(p) ≔ Dedans" org.eventb.core.label="f"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_L3JZE71wEei2xYMIwkibTg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SORTIR">
+<org.eventb.core.parameter name="_BaQ4kL1yEei2xYMIwkibTg" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_-lENEL1xEei2xYMIwkibTg" org.eventb.core.label="g" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_BaQ4kb1yEei2xYMIwkibTg" org.eventb.core.label="j" org.eventb.core.predicate="fPos(p) = Dedans"/>
+<org.eventb.core.action name="_L3KAIb1wEei2xYMIwkibTg" org.eventb.core.assignment="fPos(p) ≔ Dehors" org.eventb.core.label="f"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

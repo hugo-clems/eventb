@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TP1/Personnes.buc|org.eventb.core.contextFile#Personnes|org.eventb.core.carrierSet#_sMiogL1vEei2xYMIwkibTg" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scContextFile>

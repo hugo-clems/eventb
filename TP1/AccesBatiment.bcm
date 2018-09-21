@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/TP1/Positions.bcc" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.seesContext#_G0dpsL1tEei2xYMIwkibTg"/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/TP1/Personnes.bcc" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.seesContext#_Z7uq8L1sEei2xYMIwkibTg"/>
+<org.eventb.core.scInternalContext name="Positions">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="p" org.eventb.core.predicate="partition(Position,{Dedans},{Dehors})" org.eventb.core.source="/TP1/Positions.buc|org.eventb.core.contextFile#Positions|org.eventb.core.axiom#_P0hxcL1sEei2xYMIwkibTg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Dedans" org.eventb.core.source="/TP1/Positions.buc|org.eventb.core.contextFile#Positions|org.eventb.core.constant#_P0hKYL1sEei2xYMIwkibTg" org.eventb.core.type="Position"/>
+<org.eventb.core.scConstant name="Dehors" org.eventb.core.source="/TP1/Positions.buc|org.eventb.core.contextFile#Positions|org.eventb.core.constant#_P0hKYb1sEei2xYMIwkibTg" org.eventb.core.type="Position"/>
+<org.eventb.core.scCarrierSet name="Position" org.eventb.core.source="/TP1/Positions.buc|org.eventb.core.contextFile#Positions|org.eventb.core.carrierSet#_Ktu2wL1sEei2xYMIwkibTg" org.eventb.core.type="ℙ(Position)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="Personnes">
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/TP1/Personnes.buc|org.eventb.core.contextFile#Personnes|org.eventb.core.carrierSet#_sMiogL1vEei2xYMIwkibTg" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="Positiont" org.eventb.core.label="f" org.eventb.core.predicate="fPos∈Personne → Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="fPos" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.variable#_Z7vSAL1sEei2xYMIwkibTg" org.eventb.core.type="ℙ(Personne×Position)"/>
+<org.eventb.core.scEvent name="Positionu" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="fPos ≔ Personne × {Dehors}" org.eventb.core.label="i" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#'|org.eventb.core.action#_miaXQL1vEei2xYMIwkibTg"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Positionv" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ENTRER" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="g" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.guard#_L3JZEb1wEei2xYMIwkibTg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="j" org.eventb.core.predicate="fPos(p)=Dehors" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.guard#_L3KAIL1wEei2xYMIwkibTg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.parameter#_-lDmAL1xEei2xYMIwkibTg" org.eventb.core.type="Personne"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="fPos ≔ fPos{p ↦ Dedans}" org.eventb.core.label="f" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZEL1wEei2xYMIwkibTg|org.eventb.core.action#_L3JZEr1wEei2xYMIwkibTg"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Positionw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SORTIR" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="g" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.guard#_-lENEL1xEei2xYMIwkibTg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="j" org.eventb.core.predicate="fPos(p)=Dedans" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.guard#_BaQ4kb1yEei2xYMIwkibTg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="p" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.parameter#_BaQ4kL1yEei2xYMIwkibTg" org.eventb.core.type="Personne"/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="fPos ≔ fPos{p ↦ Dehors}" org.eventb.core.label="f" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.event#_L3JZE71wEei2xYMIwkibTg|org.eventb.core.action#_L3KAIb1wEei2xYMIwkibTg"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1537514802270" org.eventb.texttools.text_representation="context Positions&#10;sets Position&#10;constants Dedans Dehors&#10;axioms&#10;  @p partition(Position, { Dedans }, { Dehors })&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_Ktu2wL1sEei2xYMIwkibTg" org.eventb.core.identifier="Position"/>
+<org.eventb.core.constant name="_P0hKYL1sEei2xYMIwkibTg" org.eventb.core.identifier="Dedans"/>
+<org.eventb.core.constant name="_P0hKYb1sEei2xYMIwkibTg" org.eventb.core.identifier="Dehors"/>
+<org.eventb.core.axiom name="_P0hxcL1sEei2xYMIwkibTg" org.eventb.core.label="p" org.eventb.core.predicate="partition(Position, { Dedans }, { Dehors })"/>
+</org.eventb.core.contextFile>
