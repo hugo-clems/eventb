@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1537975854342" org.eventb.texttools.text_representation="context Zones&#10;sets Zone&#10;constants Exterieur Sortie&#10;axioms &#9;@ext Exterieur ∈ Zone&#10;&#9;&#9;@sortie Sortie ∈ Zone ∖ { Exterieur } → Zone&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="_Rsl60MGUEeizD8sYQCGYIg" org.eventb.core.identifier="Zone"/>
+<org.eventb.core.constant name="_JcjFUMGWEeizD8sYQCGYIg" org.eventb.core.identifier="Exterieur"/>
+<org.eventb.core.axiom name="_NnDW4MGWEeizD8sYQCGYIg" org.eventb.core.label="ext" org.eventb.core.predicate="Exterieur ∈ Zone"/>
+<org.eventb.core.constant name="_c7RngMGZEeizD8sYQCGYIg" org.eventb.core.identifier="Sortie"/>
+<org.eventb.core.axiom name="_c7RngcGZEeizD8sYQCGYIg" org.eventb.core.label="sortie" org.eventb.core.predicate="Sortie ∈ Zone ∖ { Exterieur } → Zone"/>
+</org.eventb.core.contextFile>
