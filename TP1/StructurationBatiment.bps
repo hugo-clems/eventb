@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/fZone/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ENTRER/cond3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ENTRER/fZone/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ENTRER/j/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SORTIR/cond2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SORTIR/fZone/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SORTIR/j/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PASSER/cond2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PASSER/cond3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="PASSER/fZone/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="DIRIGER_SORTIE/cond2/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="DIRIGER_SORTIE/cond3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="DIRIGER_SORTIE/fZone/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="DIRIGER_SORTIE/dirigerSortie/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="dehorsEstExt/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/dehorsEstExt/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ENTRER/zoneActuel/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ENTRER/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ENTRER/dehorsEstExt/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ENTRER/positionActuel/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="48" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/defZone/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/dehorsEstExt/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/positionActuel/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="48" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PASSER/defZoneActuel/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PASSER/defZoneSuivante/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PASSER/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PASSER/dehorsEstExt/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="DIRIGER_SORTIE/defZoneActuel/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="DIRIGER_SORTIE/defZoneSuivante/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="DIRIGER_SORTIE/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="DIRIGER_SORTIE/dehorsEstExt/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="45" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="DIRIGER_SORTIE/changementZone/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

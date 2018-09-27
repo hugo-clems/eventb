@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/f/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ENTRER/j/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ENTRER/f/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SORTIR/j/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SORTIR/f/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ENTRER/positionActuel/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ENTRER/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/positionActuel/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/defFZone/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

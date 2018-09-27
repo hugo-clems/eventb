@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
-<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
 <org.eventb.core.poIdentifier name="Position" org.eventb.core.type="ℙ(Position)"/>
 <org.eventb.core.poIdentifier name="Dedans" org.eventb.core.type="Position"/>
 <org.eventb.core.poIdentifier name="Dehors" org.eventb.core.type="Position"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/Positions.bpo|org.eventb.core.poFile#Positions|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/Positions.bpo|org.eventb.core.poFile#Positions|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Position,{Dedans},{Dehors})" org.eventb.core.source="/TP1/Positions.buc|org.eventb.core.contextFile#Positions|org.eventb.core.axiom#_P0hxcL1sEei2xYMIwkibTg"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
