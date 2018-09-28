@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538029841558" org.eventb.texttools.text_representation="context Zones&#10;sets Zone&#9;// Le bâtiment est structuré en un nombre fini de zones&#10;constants Exterieur Sortie&#10;axioms&#10;&#9;@ext Exterieur ∈ Zone&#9;&#9;&#9;&#9;&#9;&#9;&#9;// L’extérieur du bâtiment est considéré comme une zone&#10;&#9;@sortie Sortie ∈ Zone ∖ { Exterieur } → Zone&#9;// La sortie est fléchée depuis chaque zone&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538117140142" org.eventb.texttools.text_representation="context Zones&#10;sets Zone&#9;// Le bâtiment est structuré en un nombre fini de zones&#10;constants Exterieur Sortie Distance&#10;axioms&#10;&#9;@ext&#9;  Exterieur ∈ Zone&#9;&#9;&#9;&#9;&#9;&#9;// L’extérieur du bâtiment est considéré comme une zone&#10;&#9;@sortie   Sortie ∈ Zone ∖ { Exterieur } → Zone&#9;// La sortie est fléchée depuis chaque zone&#10;&#9;@distance Distance ∈ Zone → ℕ&#10;&#9;@d ∀ zone1 · zone1 ∈ Zone ∖ {Exterieur} ⇒ Distance(Sortie(zone1)) &lt; Distance(zone1)&#10;end&#10;" version="3">
 <org.eventb.core.carrierSet name="_Rsl60MGUEeizD8sYQCGYIg" org.eventb.core.comment="Le bâtiment est structuré en un nombre fini de zones" org.eventb.core.identifier="Zone"/>
 <org.eventb.core.constant name="_JcjFUMGWEeizD8sYQCGYIg" org.eventb.core.identifier="Exterieur"/>
 <org.eventb.core.axiom name="_NnDW4MGWEeizD8sYQCGYIg" org.eventb.core.comment="L’extérieur du bâtiment est considéré comme une zone" org.eventb.core.label="ext" org.eventb.core.predicate="Exterieur ∈ Zone"/>
 <org.eventb.core.constant name="_c7RngMGZEeizD8sYQCGYIg" org.eventb.core.identifier="Sortie"/>
 <org.eventb.core.axiom name="_c7RngcGZEeizD8sYQCGYIg" org.eventb.core.comment="La sortie est fléchée depuis chaque zone" org.eventb.core.label="sortie" org.eventb.core.predicate="Sortie ∈ Zone ∖ { Exterieur } → Zone"/>
+<org.eventb.core.constant name="_eoZc4MLnEeiuA9DXAS4lqg" org.eventb.core.identifier="Distance"/>
+<org.eventb.core.axiom name="_GnCgMMLoEeiuA9DXAS4lqg" org.eventb.core.label="distance" org.eventb.core.predicate="Distance ∈ Zone → ℕ"/>
+<org.eventb.core.axiom name="_HR8McMLqEeiuA9DXAS4lqg" org.eventb.core.label="d" org.eventb.core.predicate="∀ zone1 · zone1 ∈ Zone ∖ {Exterieur} ⇒ Distance(Sortie(zone1)) &lt; Distance(zone1)"/>
 </org.eventb.core.contextFile>
