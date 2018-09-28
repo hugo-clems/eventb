@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538121412275" org.eventb.texttools.text_representation="context Autorisations extends Personnes Zones&#10;constants Autoriser&#10;axioms&#10;&#9;@autoriser &#9; Autoriser ∈ Personne ↔ Zone&#9;&#9;// Une personne a l’autorisation d’accéder à certaines zones&#10;&#9;@tousAutoExt ∀ p · Autoriser(p) ∈ { Exterieur }&#9;// L’extérieur du bâtiment est considéré comme une zone accessible à toute personne&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_1kMCMMLyEeiuA9DXAS4lqg" org.eventb.core.target="Personnes"/>
+<org.eventb.core.extendsContext name="_1kMCMcLyEeiuA9DXAS4lqg" org.eventb.core.target="Zones"/>
+<org.eventb.core.axiom name="_z-2cEMLyEeiuA9DXAS4lqg" org.eventb.core.comment="Une personne a l’autorisation d’accéder à certaines zones" org.eventb.core.label="autoriser" org.eventb.core.predicate="Autoriser ∈ Personne ↔ Zone"/>
+<org.eventb.core.constant name="_Qby90MLzEeiuA9DXAS4lqg" org.eventb.core.identifier="Autoriser"/>
+<org.eventb.core.axiom name="_jlcvQMLzEeiuA9DXAS4lqg" org.eventb.core.comment="L’extérieur du bâtiment est considéré comme une zone accessible à toute personne" org.eventb.core.label="tousAutoExt" org.eventb.core.predicate="∀ p · Autoriser(p) ∈ { Exterieur }"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Distance" org.eventb.core.type="ℙ(Zone×ℤ)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="Sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_NnDW4MGWEeizD8sYQCGYIg"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_c7RngcGZEeizD8sYQCGYIg"/>
+<org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="Distance∈Zone → ℕ" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_GnCgMMLoEeiuA9DXAS4lqg"/>
+<org.eventb.core.poPredicate name="Exterieuv" org.eventb.core.predicate="∀zone1⦂Zone·zone1∈Zone ∖ {Exterieur}⇒Distance(Sortie(zone1))&lt;Distance(zone1)" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_HR8McMLqEeiuA9DXAS4lqg"/>
+<org.eventb.core.poIdentifier name="Autoriser" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="tousAutoExt/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/Autorisations.bpo|org.eventb.core.poFile#Autorisations|org.eventb.core.poPredicateSet#HYPPersonnet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Personne·p∈dom(Autoriser)∧Autoriser∈Personne ⇸ Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_jlcvQMLzEeiuA9DXAS4lqg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_jlcvQMLzEeiuA9DXAS4lqg"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/Autorisations.bpo|org.eventb.core.poFile#Autorisations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/TP1/Autorisations.bpo|org.eventb.core.poFile#Autorisations|org.eventb.core.poPredicateSet#HYPPersonnet"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPPersonnet" org.eventb.core.parentSet="/TP1/Autorisations.bpo|org.eventb.core.poFile#Autorisations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Autoriser∈Personne ↔ Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_z-2cEMLyEeiuA9DXAS4lqg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/Autorisations.bpo|org.eventb.core.poFile#Autorisations|org.eventb.core.poPredicateSet#HYPPersonnet" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀p⦂Personne·Autoriser(p)∈{Exterieur}" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_jlcvQMLzEeiuA9DXAS4lqg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
