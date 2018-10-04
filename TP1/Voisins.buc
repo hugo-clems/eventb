@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538666394123" org.eventb.texttools.text_representation="context Voisins extends Autorisations&#10;constants Communique&#10;axioms&#10;&#9;@voisin Communique ∈ Zone ↔ Zone&#9;// Certaines zones sont en communication&#10;&#10;&#9;// Une personne ayant l’autorisation d’être dans une zone doit avoir l’autorisation dans la zone indiquée par la sortie.&#10;&#9;@sortieAut ∀ p · ∀ z · p ↦ z ∈ Autoriser ⇒ p ↦ Sortie(z) ∈ Autoriser&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_0ydakMflEeif2ZMEZhI0WQ" org.eventb.core.target="Autorisations"/>
+<org.eventb.core.constant name="_cmMVwcfjEeif2ZMEZhI0WQ" org.eventb.core.identifier="Communique"/>
+<org.eventb.core.axiom name="_cmM80MfjEeif2ZMEZhI0WQ" org.eventb.core.comment="Certaines zones sont en communication&#10;Une personne ayant l’autorisation d’être dans une zone doit avoir l’autorisation dans la zone indiquée par la sortie." org.eventb.core.label="voisin" org.eventb.core.predicate="Communique ∈ Zone ↔ Zone"/>
+<org.eventb.core.axiom name="_y-5q4MfoEeif2ZMEZhI0WQ" org.eventb.core.label="sortieAut" org.eventb.core.predicate="∀ p · ∀ z · p ↦ z ∈ Autoriser ⇒ p ↦ Sortie(z) ∈ Autoriser"/>
+</org.eventb.core.contextFile>

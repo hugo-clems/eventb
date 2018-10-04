@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538662874856" org.eventb.texttools.text_representation="machine IntroductionDesVoisinages refines ProprieteDeSecurite sees Positions Autorisations&#10;variables fZone&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event CHANGEMENT_ZONE extends CHANGEMENT_ZONE&#10;  end&#10;  event SORTIR extends SORTIR&#10;  end&#10;  event DIRIGER_SORTIE extends DIRIGER_SORTIE&#10;  end&#10;  event PASSER refines PASSER&#10;  &#9;any p&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538665948524" org.eventb.texttools.text_representation="machine IntroductionDesVoisinages refines ProprieteDeSecurite sees Positions Autorisations Voisins&#10;variables fZone&#10;&#10;// Depuis toute zone autre que l’extérieur, une zone voisine conduisant vers l’extérieur est indiquée.&#10;invariants&#10;&#9;@versLaSortieEstVoisin ∀ z · z ∈ Zone ∖ { Exterieur } ⇒ z ↦ Sortie(z) ∈ Communique&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event CHANGEMENT_ZONE extends CHANGEMENT_ZONE&#10;  end&#10;  event SORTIR extends SORTIR&#10;  end&#10;  event DIRIGER_SORTIE extends DIRIGER_SORTIE&#10;  end&#10;  event PASSER refines PASSER&#10;  &#9;any p zSuivante&#10;  &#9;where&#10;  &#9;&#9;@defPersonne p ∈ Personne&#10;  &#9;&#9;@defZone zSuivante ∈ Zone&#10;  &#9;&#9;@a fZone(p) ↦ zSuivante ∈ Communique&#9;// On ne peut passer d’une zone à l’autre que si les zones de départ et d’arrivée communiquent.&#10;  &#9;then&#10;  &#9;&#9;@changementZone fZone(p) ≔ zSuivante&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="ProprieteDeSecurite"/>
 <org.eventb.core.seesContext name="_SJACoMGXEeizD8sYQCGYIg" org.eventb.core.target="Positions"/>
 <org.eventb.core.seesContext name="_TjAmYMLzEeiuA9DXAS4lqg" org.eventb.core.target="Autorisations"/>
-<org.eventb.core.variable name="_IC9UgMfeEeif2ZMEZhI0WQ" org.eventb.core.identifier="fZone"/>
+<org.eventb.core.seesContext name="_p3iQAMfjEeif2ZMEZhI0WQ" org.eventb.core.target="Voisins"/>
+<org.eventb.core.variable name="_IC9UgMfeEeif2ZMEZhI0WQ" org.eventb.core.comment="Depuis toute zone autre que l’extérieur, une zone voisine conduisant vers l’extérieur est indiquée." org.eventb.core.identifier="fZone"/>
 <org.eventb.core.event name="_TjAmYMLzEeiuA9DXAS4lqh" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
 <org.eventb.core.event name="_TjAmYMLzEeiuA9DXAS4lqi" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGEMENT_ZONE">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGEMENT_ZONE"/>
@@ -16,6 +17,12 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="_TjAmYMLzEeiuA9DXAS4lql" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PASSER">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="PASSER"/>
-<org.eventb.core.parameter name="_wFsiwMfgEeif2ZMEZhI0WQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_NIqQwMfjEeif2ZMEZhI0WQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_NIqQwcfjEeif2ZMEZhI0WQ" org.eventb.core.identifier="zSuivante"/>
+<org.eventb.core.guard name="_NIqQwsfjEeif2ZMEZhI0WQ" org.eventb.core.label="defPersonne" org.eventb.core.predicate="p ∈ Personne"/>
+<org.eventb.core.guard name="_NIqQw8fjEeif2ZMEZhI0WQ" org.eventb.core.label="defZone" org.eventb.core.predicate="zSuivante ∈ Zone"/>
+<org.eventb.core.action name="_NIqQxMfjEeif2ZMEZhI0WQ" org.eventb.core.assignment="fZone(p) ≔ zSuivante" org.eventb.core.label="changementZone"/>
+<org.eventb.core.guard name="_x-l2sMfjEeif2ZMEZhI0WQ" org.eventb.core.comment="On ne peut passer d’une zone à l’autre que si les zones de départ et d’arrivée communiquent." org.eventb.core.label="a" org.eventb.core.predicate="fZone(p) ↦ zSuivante ∈ Communique"/>
 </org.eventb.core.event>
+<org.eventb.core.invariant name="_Dcd7cMfnEeif2ZMEZhI0WQ" org.eventb.core.label="versLaSortieEstVoisin" org.eventb.core.predicate="∀ z · z ∈ Zone ∖ { Exterieur } ⇒ z ↦ Sortie(z) ∈ Communique"/>
 </org.eventb.core.machineFile>
