@@ -16,6 +16,6 @@
 <org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.carrierSet#_Rsl60MGUEeizD8sYQCGYIg" org.eventb.core.type="ℙ(Zone)"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scAxiom name="Personnet" org.eventb.core.label="autoriser" org.eventb.core.predicate="Autoriser∈Personne ↔ Zone" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_z-2cEMLyEeiuA9DXAS4lqg" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="Personneu" org.eventb.core.label="tousAutoExt" org.eventb.core.predicate="∀p⦂Personne·Autoriser(p)∈{Exterieur}" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_jlcvQMLzEeiuA9DXAS4lqg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Personneu" org.eventb.core.label="tousAutoExt" org.eventb.core.predicate="∀p⦂Personne·p ↦ Exterieur∈Autoriser" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_jlcvQMLzEeiuA9DXAS4lqg" org.eventb.core.theorem="false"/>
 <org.eventb.core.scConstant name="Autoriser" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.constant#_Qby90MLzEeiuA9DXAS4lqg" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.scContextFile>

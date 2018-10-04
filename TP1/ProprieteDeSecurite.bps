@@ -1,2 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.core.psFile/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="estAut/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/estAut/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CHANGEMENT_ZONE/estAut/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SORTIR/estAut/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="DIRIGER_SORTIE/estAut/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PASSER/estAut/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="PASSER/fZone/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
