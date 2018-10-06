@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scCarrierSet name="Porte" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.carrierSet#_x1zeQMl8EeiP2pX9UfNPmw" org.eventb.core.type="ℙ(Porte)"/>
+</org.eventb.core.scContextFile>

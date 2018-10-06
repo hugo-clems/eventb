@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="7">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="Position" org.eventb.core.type="ℙ(Position)"/>
 <org.eventb.core.poIdentifier name="Dedans" org.eventb.core.type="Position"/>
 <org.eventb.core.poIdentifier name="Dehors" org.eventb.core.type="Position"/>
@@ -19,8 +19,9 @@
 <org.eventb.core.poPredicate name="Exterieux" org.eventb.core.predicate="∀p⦂Personne·p ↦ Exterieur∈Autoriser" org.eventb.core.source="/TP1/Autorisations.buc|org.eventb.core.contextFile#Autorisations|org.eventb.core.axiom#_jlcvQMLzEeiuA9DXAS4lqg"/>
 <org.eventb.core.poIdentifier name="Communique" org.eventb.core.type="ℙ(Zone×Zone)"/>
 <org.eventb.core.poPredicate name="Communiquf" org.eventb.core.predicate="Communique∈Zone ↔ Zone" org.eventb.core.source="/TP1/Voisins.buc|org.eventb.core.contextFile#Voisins|org.eventb.core.axiom#_cmM80MfjEeif2ZMEZhI0WQ"/>
+<org.eventb.core.poPredicate name="Communiqug" org.eventb.core.predicate="∀p⦂Personne·∀z⦂Zone·p ↦ z∈Autoriser⇒p ↦ Sortie(z)∈Autoriser" org.eventb.core.source="/TP1/Voisins.buc|org.eventb.core.contextFile#Voisins|org.eventb.core.axiom#_y-5q4MfoEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="fPos" org.eventb.core.type="ℙ(Personne×Position)"/>
 <org.eventb.core.poIdentifier name="fZone" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poPredicate name="fZonf" org.eventb.core.predicate="fPos∈Personne → Position" org.eventb.core.source="/TP1/AccesBatiment.bum|org.eventb.core.machineFile#AccesBatiment|org.eventb.core.invariant#_Z7v5EL1sEei2xYMIwkibTg"/>
@@ -28,13 +29,13 @@
 <org.eventb.core.poPredicate name="fZonh" org.eventb.core.predicate="∀p⦂Personne·fPos(p)=Dehors⇔fZone(p)=Exterieur" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.invariant#_GKUBoMIcEeiWSuIlqfo51Q"/>
 <org.eventb.core.poPredicate name="fZoni" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p ↦ fZone(p)∈Autoriser" org.eventb.core.source="/TP1/ProprieteDeSecurite.bum|org.eventb.core.machineFile#ProprieteDeSecurite|org.eventb.core.invariant#_Dz3L8MfgEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="versLaSortieEstVoisin/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="7">
+<org.eventb.core.poSequent name="versLaSortieEstVoisin/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ABSHYP"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z∈dom(Sortie)∧Sortie∈Zone ⇸ Zone" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.invariant#_Dcd7cMfnEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.invariant#_Dcd7cMfnEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ABSHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/versLaSortieEstVoisin/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
+<org.eventb.core.poSequent name="INITIALISATION/versLaSortieEstVoisin/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationv"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ Sortie(z)∈Communique" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.invariant#_Dcd7cMfnEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/ProprieteDeSecurite.bum|org.eventb.core.machineFile#ProprieteDeSecurite|org.eventb.core.event#_SYrvUMGVEeizD8sYQCGYIh"/>
@@ -43,43 +44,43 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poSequent#INITIALISATION\/versLaSortieEstVoisin\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationv" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationv" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationv" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationv" org.eventb.core.poStamp="7"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationw" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationv" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationv" org.eventb.core.poStamp="8"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationw" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="zSuivante" org.eventb.core.type="Zone"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationw" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationw" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationw" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationw" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/FusionEvenements.bum|org.eventb.core.machineFile#FusionEvenements|org.eventb.core.event#_SYrvUMGVEeizD8sYQCGYIi|org.eventb.core.guard#_V43AQsLvEeiuA9DXAS4lqg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="zSuivante∈Zone ∖ {Exterieur,fZone(p)}" org.eventb.core.source="/TP1/FusionEvenements.bum|org.eventb.core.machineFile#FusionEvenements|org.eventb.core.event#_SYrvUMGVEeizD8sYQCGYIi|org.eventb.core.guard#_aC27gMLvEeiuA9DXAS4lqg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationx" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationx" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationx" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationx" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationx" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationx" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_QSsTMMGVEeizD8sYQCGYIg|org.eventb.core.guard#_dwRgYsGaEeizD8sYQCGYIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fZone(p)∈Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_QSsTMMGVEeizD8sYQCGYIg|org.eventb.core.guard#_6iXywMGaEeizD8sYQCGYIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationy" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationy" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationy" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationy" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationy" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationy" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_7Hl4UMGdEeizD8sYQCGYIg|org.eventb.core.guard#_rUX6YcGhEeizD8sYQCGYIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fZone(p)≠Exterieur" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_7Hl4UMGdEeizD8sYQCGYIg|org.eventb.core.guard#_6l8nAMGhEeizD8sYQCGYIg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Sortie(fZone(p))≠Exterieur" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_7Hl4UMGdEeizD8sYQCGYIg|org.eventb.core.guard#_412F4MGiEeizD8sYQCGYIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="PASSER/a/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="7">
+<org.eventb.core.poSequent name="PASSER/a/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTHYPAutorisationz)"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fZone)∧fZone∈Personne ⇸ Zone" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_x-l2sMfjEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_x-l2sMfjEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTHYPAutorisationz)"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="PASSER/zoneAuto/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="7">
+<org.eventb.core.poSequent name="PASSER/zoneAuto/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationz"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p ↦ zSuivante∈Autoriser" org.eventb.core.source="/TP1/ProprieteDeSecurite.bum|org.eventb.core.machineFile#ProprieteDeSecurite|org.eventb.core.event#_G-3aQMfeEeif2ZMEZhI0WQ|org.eventb.core.guard#_YIRLMMfeEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/ProprieteDeSecurite.bum|org.eventb.core.machineFile#ProprieteDeSecurite|org.eventb.core.event#_G-3aQMfeEeif2ZMEZhI0WQ"/>
@@ -87,19 +88,19 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poSequent#PASSER\/zoneAuto\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="zSuivante" org.eventb.core.type="Zone"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPAutorisationz)" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisationz)" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTIDENTAutorisationz" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_NIqQwsfjEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="zSuivante∈Zone" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_NIqQw8fjEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTHYPAutorisationz)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#EVTHYPAutorisationz)" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="fZone(p) ↦ zSuivante∈Communique" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_x-l2sMfjEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/IntroductionDesVoisinages.bpo|org.eventb.core.poFile#IntroductionDesVoisinages|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ Sortie(z)∈Communique" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.invariant#_Dcd7cMfnEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
