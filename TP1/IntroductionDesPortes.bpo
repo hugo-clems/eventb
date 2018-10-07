@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="Position" org.eventb.core.type="ℙ(Position)"/>
 <org.eventb.core.poIdentifier name="Dedans" org.eventb.core.type="Position"/>
 <org.eventb.core.poIdentifier name="Dehors" org.eventb.core.type="Position"/>
@@ -22,8 +22,9 @@
 <org.eventb.core.poPredicate name="Communiqug" org.eventb.core.predicate="∀p⦂Personne·∀z⦂Zone·p ↦ z∈Autoriser⇒p ↦ Sortie(z)∈Autoriser" org.eventb.core.source="/TP1/Voisins.buc|org.eventb.core.contextFile#Voisins|org.eventb.core.axiom#_y-5q4MfoEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poIdentifier name="Porte" org.eventb.core.type="ℙ(Porte)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="fFranchir" org.eventb.core.type="ℙ(Personne×Porte)"/>
+<org.eventb.core.poIdentifier name="fPorte" org.eventb.core.type="ℙ(Zone×Zone)"/>
 <org.eventb.core.poIdentifier name="fPos" org.eventb.core.type="ℙ(Personne×Position)"/>
 <org.eventb.core.poIdentifier name="fZone" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="portesRouges" org.eventb.core.type="ℙ(Porte)"/>
@@ -34,8 +35,8 @@
 <org.eventb.core.poPredicate name="portesVertew" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p ↦ fZone(p)∈Autoriser" org.eventb.core.source="/TP1/ProprieteDeSecurite.bum|org.eventb.core.machineFile#ProprieteDeSecurite|org.eventb.core.invariant#_Dz3L8MfgEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poPredicate name="portesVertex" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ Sortie(z)∈Communique" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.invariant#_Dcd7cMfnEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/defFFranchir/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationy"/>
+<org.eventb.core.poSequent name="INITIALISATION/defFFranchir/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationz"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="fFranchir'∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_yDk0gcl8EeiP2pX9UfNPmw"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lqh"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_p3iQAMfjEeif2ZMEZhI0WR"/>
@@ -43,56 +44,187 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poSequent#INITIALISATION\/defFFranchir\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationy" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="INITIALISATION/defFPorte/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisationz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="fPorte'∈Zone → Zone" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_FqNVgsmAEeiP2pX9UfNPmw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lqh"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_p3iQAMfjEeif2ZMEZhI0WR"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_FqNVgsmAEeiP2pX9UfNPmw"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poSequent#INITIALISATION\/defFPorte\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="fPorte'" org.eventb.core.type="ℙ(Zone×Zone)"/>
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="portesVertes'" org.eventb.core.type="ℙ(Porte)"/>
 <org.eventb.core.poIdentifier name="portesRouges'" org.eventb.core.type="ℙ(Porte)"/>
 <org.eventb.core.poIdentifier name="fFranchir'" org.eventb.core.type="ℙ(Personne×Porte)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationy" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisationy" org.eventb.core.poStamp="6"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisationz" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation{" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="zSuivante" org.eventb.core.type="Zone"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisationz" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisationz" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation{" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation{" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/FusionEvenements.bum|org.eventb.core.machineFile#FusionEvenements|org.eventb.core.event#_SYrvUMGVEeizD8sYQCGYIi|org.eventb.core.guard#_V43AQsLvEeiuA9DXAS4lqg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="zSuivante∈Zone ∖ {Exterieur,fZone(p)}" org.eventb.core.source="/TP1/FusionEvenements.bum|org.eventb.core.machineFile#FusionEvenements|org.eventb.core.event#_SYrvUMGVEeizD8sYQCGYIi|org.eventb.core.guard#_aC27gMLvEeiuA9DXAS4lqg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation{" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation|" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation{" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation{" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation|" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation\|" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_QSsTMMGVEeizD8sYQCGYIg|org.eventb.core.guard#_dwRgYsGaEeizD8sYQCGYIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fZone(p)∈Zone ∖ {Exterieur}" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_QSsTMMGVEeizD8sYQCGYIg|org.eventb.core.guard#_6iXywMGaEeizD8sYQCGYIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation|" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation}" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation|" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation\|" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation}" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation}" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_7Hl4UMGdEeizD8sYQCGYIg|org.eventb.core.guard#_rUX6YcGhEeizD8sYQCGYIg"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fZone(p)≠Exterieur" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_7Hl4UMGdEeizD8sYQCGYIg|org.eventb.core.guard#_6l8nAMGhEeizD8sYQCGYIg"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Sortie(fZone(p))≠Exterieur" org.eventb.core.source="/TP1/StructurationBatiment.bum|org.eventb.core.machineFile#StructurationBatiment|org.eventb.core.event#_7Hl4UMGdEeizD8sYQCGYIg|org.eventb.core.guard#_412F4MGiEeizD8sYQCGYIg"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation}" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisation~" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poIdentifier name="fZone'" org.eventb.core.type="ℙ(Personne×Zone)"/>
 <org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
 <org.eventb.core.poIdentifier name="zSuivante" org.eventb.core.type="Zone"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation}" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation}" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation~" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisation~" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_NIqQwsfjEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="zSuivante∈Zone" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_NIqQw8fjEeif2ZMEZhI0WQ"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="fZone(p) ↦ zSuivante∈Communique" org.eventb.core.source="/TP1/IntroductionDesVoisinages.bum|org.eventb.core.machineFile#IntroductionDesVoisinages|org.eventb.core.event#_TjAmYMLzEeiuA9DXAS4lql|org.eventb.core.guard#_x-l2sMfjEeif2ZMEZhI0WQ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisation~" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo'" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo(" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6"/>
-<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo)" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poSequent name="ACCEPTER/d/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo''"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fZone)∧fZone∈Personne ⇸ Zone∧fZone(p)∈dom(fPorte)∧fPorte∈Zone ⇸ Zone" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_slUVoco4EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_slUVoco4EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo''"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ACCEPTER/f/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo'("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_qCKm8Mo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_qCKm8Mo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo'("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ACCEPTER/g/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo')"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_qCLOAMo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_qCLOAMo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo')"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ACCEPTER/e/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.action#_TnZDAMo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.action#_TnZDAMo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisatioo'" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
+<org.eventb.core.poIdentifier name="portesVertes'" org.eventb.core.type="ℙ(Porte)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo''" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisatioo'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_slUVoMo4EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo'(" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo''" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p ↦ fPorte(fZone(p))∈Autoriser" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_slUVoco4EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo')" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo'(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="fFranchir(p)∉portesVertes" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_qCKm8Mo5EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo'" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo')" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="fFranchir(p)∉portesRouges" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_UkvigMl9EeiP2pX9UfNPmw|org.eventb.core.guard#_qCLOAMo5EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="REFUSER/d/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo('"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fZone)∧fZone∈Personne ⇸ Zone∧fZone(p)∈dom(fPorte)∧fPorte∈Zone ⇸ Zone" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8co5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8co5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo('"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="REFUSER/f/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo(("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8so5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8so5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo(("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="REFUSER/g/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo()"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V2nAMo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V2nAMo5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo()"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="REFUSER/e/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.action#__V2nAco5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.action#__V2nAco5EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisatioo(" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="portesRouges'" org.eventb.core.type="ℙ(Porte)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo('" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisatioo(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8Mo5EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo((" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo('" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p ↦ fPorte(fZone(p))∉Autoriser" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8co5EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo()" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo((" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="fFranchir(p)∉portesVertes" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V1_8so5EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo(" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo()" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="fFranchir(p)∉portesRouges" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigcl9EeiP2pX9UfNPmw|org.eventb.core.guard#__V2nAMo5EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ETEINDRE_VERT/x/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo)'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigsl9EeiP2pX9UfNPmw|org.eventb.core.guard#_mYSgwMo6EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigsl9EeiP2pX9UfNPmw|org.eventb.core.guard#_mYSgwMo6EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo)'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ETEINDRE_VERT/xx/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigsl9EeiP2pX9UfNPmw|org.eventb.core.action#_T-4ggso6EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigsl9EeiP2pX9UfNPmw|org.eventb.core.action#_T-4ggso6EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisatioo)" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
+<org.eventb.core.poIdentifier name="portesVertes'" org.eventb.core.type="ℙ(Porte)"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo)'" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisatioo)" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigsl9EeiP2pX9UfNPmw|org.eventb.core.guard#_T-4ggco6EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo)" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo)'" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fFranchir(p)∈portesVertes" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvigsl9EeiP2pX9UfNPmw|org.eventb.core.guard#_mYSgwMo6EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ETEINDRE_ROUGE/xxx/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo*'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvig8l9EeiP2pX9UfNPmw|org.eventb.core.guard#_BQZLoMo7EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvig8l9EeiP2pX9UfNPmw|org.eventb.core.guard#_BQZLoMo7EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo*'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ETEINDRE_ROUGE/yy/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(fFranchir)∧fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvig8l9EeiP2pX9UfNPmw|org.eventb.core.action#_jHFOsco6EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvig8l9EeiP2pX9UfNPmw|org.eventb.core.action#_jHFOsco6EeiI3qMM9oL_OQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTALLHYPAutorisatioo*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTAutorisatioo*" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="16">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="portesRouges'" org.eventb.core.type="ℙ(Porte)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPAutorisatioo*'" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTIDENTAutorisatioo*" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvig8l9EeiP2pX9UfNPmw|org.eventb.core.guard#_mYTH0Mo6EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPAutorisatioo*" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#EVTHYPAutorisatioo*'" org.eventb.core.poStamp="16">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fFranchir(p)∈portesRouges" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.event#_Ukvig8l9EeiP2pX9UfNPmw|org.eventb.core.guard#_BQZLoMo7EeiI3qMM9oL_OQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TP1/IntroductionDesPortes.bpo|org.eventb.core.poFile#IntroductionDesPortes|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="16">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fFranchir∈Personne ⇸ Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_yDk0gcl8EeiP2pX9UfNPmw"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="portesRouges⊆Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_FqNVgsmAEeiP2pX9UfNPmw"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="portesVertes⊆Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_tp9MEMmAEeiP2pX9UfNPmw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fPorte∈Zone → Zone" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_FqNVgsmAEeiP2pX9UfNPmw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="portesRouges⊆Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_tp9MEMmAEeiP2pX9UfNPmw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="portesVertes⊆Porte" org.eventb.core.source="/TP1/IntroductionDesPortes.bum|org.eventb.core.machineFile#IntroductionDesPortes|org.eventb.core.invariant#_U03FUMmBEeiP2pX9UfNPmw"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

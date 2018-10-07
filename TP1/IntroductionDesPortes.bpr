@@ -130,4 +130,19 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/defUnionPortes/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/defInterPortes/INV"/>
+<org.eventb.core.prProof name="INITIALISATION/defFPorte/INV"/>
+<org.eventb.core.prProof name="ACCEPTER/defUnionPortes/INV"/>
+<org.eventb.core.prProof name="ACCEPTER/defInterPortes/INV"/>
+<org.eventb.core.prProof name="ACCEPTER/e/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/d/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/f/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/g/WD"/>
+<org.eventb.core.prProof name="REFUSER/d/WD"/>
+<org.eventb.core.prProof name="REFUSER/f/WD"/>
+<org.eventb.core.prProof name="REFUSER/g/WD"/>
+<org.eventb.core.prProof name="REFUSER/defUnionPortes/INV"/>
+<org.eventb.core.prProof name="REFUSER/defInterPortes/INV"/>
+<org.eventb.core.prProof name="REFUSER/e/WD"/>
 </org.eventb.core.prFile>

@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/TP1/Zones.bcc|org.eventb.core.scContextFile#Zones" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.extendsContext#_gJj1AMo3EeiI3qMM9oL_OQ"/>
+<org.eventb.core.scInternalContext name="Zones">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="ext" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_NnDW4MGWEeizD8sYQCGYIg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="sortie" org.eventb.core.predicate="Sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_c7RngcGZEeizD8sYQCGYIg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="distance" org.eventb.core.predicate="Distance∈Zone → ℕ" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_GnCgMMLoEeiuA9DXAS4lqg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="distanceDecrois" org.eventb.core.predicate="∀zone1⦂Zone·zone1∈Zone ∖ {Exterieur}⇒Distance(Sortie(zone1))&lt;Distance(zone1)" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.axiom#_HR8McMLqEeiuA9DXAS4lqg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Distance" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.constant#_eoZc4MLnEeiuA9DXAS4lqg" org.eventb.core.type="ℙ(Zone×ℤ)"/>
+<org.eventb.core.scConstant name="Exterieur" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.constant#_JcjFUMGWEeizD8sYQCGYIg" org.eventb.core.type="Zone"/>
+<org.eventb.core.scConstant name="Sortie" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.constant#_c7RngMGZEeizD8sYQCGYIg" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/TP1/Zones.buc|org.eventb.core.contextFile#Zones|org.eventb.core.carrierSet#_Rsl60MGUEeizD8sYQCGYIg" org.eventb.core.type="ℙ(Zone)"/>
+</org.eventb.core.scInternalContext>
 <org.eventb.core.scCarrierSet name="Porte" org.eventb.core.source="/TP1/Portes.buc|org.eventb.core.contextFile#Portes|org.eventb.core.carrierSet#_x1zeQMl8EeiP2pX9UfNPmw" org.eventb.core.type="ℙ(Porte)"/>
 </org.eventb.core.scContextFile>

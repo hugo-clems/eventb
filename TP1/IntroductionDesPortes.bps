@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/defFFranchir/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="6" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/defFFranchir/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/defFPorte/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/defUnionPortes/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/defInterPortes/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/d/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/f/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/g/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/defUnionPortes/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/defInterPortes/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/e/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/d/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/f/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/g/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/defUnionPortes/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/defInterPortes/INV" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/e/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
