@@ -145,4 +145,18 @@
 <org.eventb.core.prProof name="REFUSER/defUnionPortes/INV"/>
 <org.eventb.core.prProof name="REFUSER/defInterPortes/INV"/>
 <org.eventb.core.prProof name="REFUSER/e/WD"/>
+<org.eventb.core.prProof name="ETEINDRE_VERT/x/WD"/>
+<org.eventb.core.prProof name="ETEINDRE_VERT/xx/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/destiAutoriser/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/nonPVerte/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/nonProuge/WD"/>
+<org.eventb.core.prProof name="ACCEPTER/vertAllume/WD"/>
+<org.eventb.core.prProof name="REFUSER/destiNonAutoriser/WD"/>
+<org.eventb.core.prProof name="REFUSER/nonPVerte/WD"/>
+<org.eventb.core.prProof name="REFUSER/nonProuge/WD"/>
+<org.eventb.core.prProof name="REFUSER/rougeAllume/WD"/>
+<org.eventb.core.prProof name="ETEINDRE_VERT/porteEstVerte/WD"/>
+<org.eventb.core.prProof name="ETEINDRE_VERT/eteindrePorte/WD"/>
+<org.eventb.core.prProof name="ETEINDRE_ROUGE/porteEstRouge/WD"/>
+<org.eventb.core.prProof name="ETEINDRE_ROUGE/eteindrePorte/WD"/>
 </org.eventb.core.prFile>

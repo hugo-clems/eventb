@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="PASSER/passageTermine/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ACCEPTER/occupeeQuandPorteVerte/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="REFUSER/occupeeQuandPorteRouge/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ETEINDRE_VERT/plusOccupee/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ETEINDRE_ROUGE/plusOccupee/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="LECTURE_CARTE/pasOccupee/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="LECTURE_CARTE/estOccupee/WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

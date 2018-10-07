@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1538924066146" org.eventb.texttools.text_representation="machine IntroductionLecteurCartes refines IntroductionDesPortes sees Positions Voisins Portes&#10;variables fZone fFranchir fPorte portesRouges portesVertes enCoursDeTraitement&#10;invariants&#10;&#9;@a enCoursDeTraitement ⊆ Porte&#10;&#9;// si c'est dans porteVerte/Rouge alors c'est dans occupee&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event CHANGEMENT_ZONE extends CHANGEMENT_ZONE&#10;  end&#10;  event SORTIR extends SORTIR&#10;  end&#10;  event DIRIGER_SORTIE extends DIRIGER_SORTIE&#10;  end&#10;&#10;  event PASSER extends PASSER&#10;  &#9;then @passageTermine enCoursDeTraitement ≔ enCoursDeTraitement ∖  { fFranchir(p) }&#10;  &#9;// Le passage d'une personne termine le traitement de la porte.&#10;  end&#10;&#10;  event ACCEPTER extends ACCEPTER&#10;  &#9;then @occupeeQuandPorteVerte enCoursDeTraitement ≔ enCoursDeTraitement ∪ { fFranchir(p) }&#10;  end&#10;&#10;  event REFUSER extends REFUSER&#10;  &#9;then @occupeeQuandPorteRouge enCoursDeTraitement ≔ enCoursDeTraitement ∪ { fFranchir(p) }&#10;  end&#10;&#10;  event ETEINDRE_VERT extends ETEINDRE_VERT&#10;  &#9;then @plusOccupee enCoursDeTraitement ≔ enCoursDeTraitement ∖  { fFranchir(p) }&#10;  &#9;// L’extinction d’un voyant termine le traitement de la porte.&#10;  end&#10;  event ETEINDRE_ROUGE extends ETEINDRE_ROUGE&#10;  &#9;then @plusOccupee enCoursDeTraitement ≔ enCoursDeTraitement ∖  { fFranchir(p) }&#10;  &#9;// L’extinction d’un voyant termine le traitement de la porte.&#10;  end&#10;&#10;  event LECTURE_CARTE&#10;  &#9;any p&#10;  &#9;where&#10;  &#9;&#9;@pasOccupee fFranchir(p) ∉ enCoursDeTraitement // Une porte non occupée peut lire une carte.&#10;  &#9;then&#10;  &#9;&#9;@estOccupee enCoursDeTraitement ≔ enCoursDeTraitement ∪ { fFranchir(p) }&#9;// Elle reconnait alors une personne et devient occupée.&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="IntroductionDesPortes"/>
+<org.eventb.core.seesContext name="_SJACoMGXEeizD8sYQCGYIg" org.eventb.core.target="Positions"/>
+<org.eventb.core.seesContext name="_p3iQAMfjEeif2ZMEZhI0WQ" org.eventb.core.target="Voisins"/>
+<org.eventb.core.seesContext name="_yDi_UMl8EeiP2pX9UfNPmw" org.eventb.core.target="Portes"/>
+<org.eventb.core.variable name="_IC9UgMfeEeif2ZMEZhI0WQ" org.eventb.core.identifier="fZone"/>
+<org.eventb.core.variable name="_yDk0gMl8EeiP2pX9UfNPmw" org.eventb.core.identifier="fFranchir"/>
+<org.eventb.core.variable name="_FqNVgMmAEeiP2pX9UfNPmw" org.eventb.core.identifier="fPorte"/>
+<org.eventb.core.variable name="_FqNVgcmAEeiP2pX9UfNPmw" org.eventb.core.identifier="portesRouges"/>
+<org.eventb.core.variable name="_TnbfQMo5EeiI3qMM9oL_OQ" org.eventb.core.identifier="portesVertes"/>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPmx" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPmy" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CHANGEMENT_ZONE">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="CHANGEMENT_ZONE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPmz" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SORTIR">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="SORTIR"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPm{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DIRIGER_SORTIE">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="DIRIGER_SORTIE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPm|" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PASSER">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="PASSER"/>
+<org.eventb.core.action name="_fgVqIso9EeiI3qMM9oL_OQ" org.eventb.core.assignment="enCoursDeTraitement ≔ enCoursDeTraitement ∖  { fFranchir(p) }" org.eventb.core.comment="Le passage d'une personne termine le traitement de la porte." org.eventb.core.label="passageTermine"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPm}" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ACCEPTER">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ACCEPTER"/>
+<org.eventb.core.action name="_ecTIUMo_EeiI3qMM9oL_OQ" org.eventb.core.assignment="enCoursDeTraitement ≔ enCoursDeTraitement ∪ { fFranchir(p) }" org.eventb.core.label="occupeeQuandPorteVerte"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPm~" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="REFUSER">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="REFUSER"/>
+<org.eventb.core.action name="_nYgOUco_EeiI3qMM9oL_OQ" org.eventb.core.assignment="enCoursDeTraitement ≔ enCoursDeTraitement ∪ { fFranchir(p) }" org.eventb.core.label="occupeeQuandPorteRouge"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPn'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ETEINDRE_VERT">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ETEINDRE_VERT"/>
+<org.eventb.core.action name="_pziGUco_EeiI3qMM9oL_OQ" org.eventb.core.assignment="enCoursDeTraitement ≔ enCoursDeTraitement ∖  { fFranchir(p) }" org.eventb.core.comment="L’extinction d’un voyant termine le traitement de la porte." org.eventb.core.label="plusOccupee"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_yDk0gMl8EeiP2pX9UfNPn(" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ETEINDRE_ROUGE">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ETEINDRE_ROUGE"/>
+<org.eventb.core.action name="_5QKMYMo_EeiI3qMM9oL_OQ" org.eventb.core.assignment="enCoursDeTraitement ≔ enCoursDeTraitement ∖  { fFranchir(p) }" org.eventb.core.comment="L’extinction d’un voyant termine le traitement de la porte." org.eventb.core.label="plusOccupee"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_TGJPwMo8EeiI3qMM9oL_OQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="LECTURE_CARTE">
+<org.eventb.core.parameter name="_fgVqIMo9EeiI3qMM9oL_OQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_fgVqIco9EeiI3qMM9oL_OQ" org.eventb.core.comment="Une porte non occupée peut lire une carte." org.eventb.core.label="pasOccupee" org.eventb.core.predicate="fFranchir(p) ∉ enCoursDeTraitement"/>
+<org.eventb.core.action name="_5QKzcMo_EeiI3qMM9oL_OQ" org.eventb.core.assignment="enCoursDeTraitement ≔ enCoursDeTraitement ∪ { fFranchir(p) }" org.eventb.core.comment="Elle reconnait alors une personne et devient occupée." org.eventb.core.label="estOccupee"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_wLyJMMo8EeiI3qMM9oL_OQ" org.eventb.core.identifier="enCoursDeTraitement"/>
+<org.eventb.core.invariant name="_wLyJMco8EeiI3qMM9oL_OQ" org.eventb.core.comment="si c'est dans porteVerte/Rouge alors c'est dans occupee" org.eventb.core.label="a" org.eventb.core.predicate="enCoursDeTraitement ⊆ Porte"/>
+</org.eventb.core.machineFile>
